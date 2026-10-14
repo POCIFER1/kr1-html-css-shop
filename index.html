@@ -60,32 +60,55 @@
     <section class="section" id="popular">
       <h2>Популярные товары</h2>
       <div class="products-grid">
-        <article class="product-card product-card--featured">
-          <h3 class="product-card__title">Товар 1</h3>
-          <p class="product-card__description">Краткое описание учебного товара.</p>
-          <p class="product-card__price">Цена: 1000 руб.</p>
-          <button class="button product-card__button" type="button" data-product="Товар 1">
+        <article class="product-card product-card--featured product-card--sale"">
+        
+          <img class=" product-card__image"
+          src="https://media.istockphoto.com/id/1169548847/ru/%D1%84%D0%BE%D1%82%D0%BE/%D0%B6%D0%B5%D0%BB%D1%82%D1%8B%D0%B9-%D0%B1%D0%B5%D1%81%D0%BF%D1%80%D0%BE%D0%B2%D0%BE%D0%B4%D0%BD%D0%BE%D0%B9-%D1%8D%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%BD%D0%BD%D0%BE%D0%B9-%D0%BE%D1%82%D0%B2%D0%B5%D1%80%D1%82%D0%BA%D0%B8-%D1%81%D0%B2%D0%B5%D1%80%D0%BB%D0%B8%D1%82%D1%8C-%D1%80%D1%83%D1%87%D0%BD%D0%BE%D0%B9-%D0%B8%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BC%D0%B5%D0%BD%D1%82-%D0%B8%D0%B7%D0%BE%D0%BB%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D1%8B%D1%85-%D0%B1%D0%B5%D0%BB%D1%8B%D0%B9.jpg?s=612x612&w=is&k=20&c=DPGDD1NXeDnv_kTtmiTWGEQvLBY9-UdxS_wVv22GhuI="
+          alt="Дрель">
+          <h3 class="product-card__title">Дрель</h3>
+          <p class="product-card__description">Мощная дрель!</p>
+
+          <div class="product-card__price-box">
+            <p class="product-card__price product-card__price--old">Цена: 7999 руб.</p>
+            <p class="product-card__price product-card__price--current">Цена: 5999 руб.</p>
+          </div>
+          <button class="button product-card__button" type="button" data-product="Дрель" data-price="5999 руб"
+            data-image="https://media.istockphoto.com/id/1169548847/ru/%D1%84%D0%BE%D1%82%D0%BE/%D0%B6%D0%B5%D0%BB%D1%82%D1%8B%D0%B9-%D0%B1%D0%B5%D1%81%D0%BF%D1%80%D0%BE%D0%B2%D0%BE%D0%B4%D0%BD%D0%BE%D0%B9-%D1%8D%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%BD%D0%BD%D0%BE%D0%B9-%D0%BE%D1%82%D0%B2%D0%B5%D1%80%D1%82%D0%BA%D0%B8-%D1%81%D0%B2%D0%B5%D1%80%D0%BB%D0%B8%D1%82%D1%8C-%D1%80%D1%83%D1%87%D0%BD%D0%BE%D0%B9-%D0%B8%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BC%D0%B5%D0%BD%D1%82-%D0%B8%D0%B7%D0%BE%D0%BB%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D1%8B%D1%85-%D0%B1%D0%B5%D0%BB%D1%8B%D0%B9.jpg?s=612x612&w=is&k=20&c=DPGDD1NXeDnv_kTtmiTWGEQvLBY9-UdxS_wVv22GhuI=">
             Заказать
           </button>
         </article>
 
         <article class="product-card product-card--featured">
-          <h3 class="product-card__title">Товар 2</h3>
-          <p class="product-card__description">Краткое описание учебного товара.</p>
-          <p class="product-card__price">Цена: 1500 руб.</p>
-          <button class="button product-card__button" type="button" data-product="Товар 1">
+          <img class="product-card__image"
+            src="https://media.istockphoto.com/id/926681604/ru/%D1%84%D0%BE%D1%82%D0%BE/%D1%8D%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F-%D0%BE%D1%82%D0%B2%D0%B5%D1%80%D1%82%D0%BA%D0%B0-%D0%B8%D0%B7%D0%BE%D0%BB%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B0-%D0%BD%D0%B0-%D0%B1%D0%B5%D0%BB%D0%BE%D0%BC-%D1%84%D0%BE%D0%BD%D0%B5.jpg?s=612x612&w=0&k=20&c=gP_P_5YoQEJgeh1knS-XA0ih1tMYr47GTqsppFHQLXY="
+            alt="Шуруповёрт">
+          <h3 class="product-card__title">Шуруповёрт</h3>
+          <p class="product-card__description">Отличный шуруповёрт!</p>
+          <p class="product-card__price">Цена: 4899 руб.</p>
+          <button class="button product-card__button" type="button" data-product="Шуруповёрт" data-price="4899 руб."
+            data-image="https://media.istockphoto.com/id/926681604/ru/%D1%84%D0%BE%D1%82%D0%BE/%D1%8D%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F-%D0%BE%D1%82%D0%B2%D0%B5%D1%80%D1%82%D0%BA%D0%B0-%D0%B8%D0%B7%D0%BE%D0%BB%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B0-%D0%BD%D0%B0-%D0%B1%D0%B5%D0%BB%D0%BE%D0%BC-%D1%84%D0%BE%D0%BD%D0%B5.jpg?s=612x612&w=0&k=20&c=gP_P_5YoQEJgeh1knS-XA0ih1tMYr47GTqsppFHQLXY=">
             Заказать
           </button>
         </article>
 
         <article class="product-card product-card--featured">
-          <h3 class="product-card__title">Товар 3</h3>
-          <p class="product-card__description">Краткое описание учебного товара.</p>
-          <p class="product-card__price">Цена: 2000 руб.</p>
-          <button class="button product-card__button" type="button" data-product="Товар 1">
+          <img class="product-card__image"
+            src="https://media.istockphoto.com/id/171269002/ru/%D1%84%D0%BE%D1%82%D0%BE/%D0%B3%D0%B0%D0%B7%D0%BE%D0%BD%D0%BE%D0%BA%D0%BE%D1%81%D0%B8%D0%BB%D0%BA%D0%B0.jpg?s=612x612&w=is&k=20&c=M7o5ctBusw19-Oy3au2PeRp7Y1UEClGovOaDitjLARo="
+            alt="Газонокосилка">
+          <h3 class="product-card__title">Газонокосилка</h3>
+          <p class="product-card__description">Достойный выбор для дачи!</p>
+          <p class="product-card__price">Цена: 10499 руб.</p>
+          <button class="button product-card__button" type="button" data-product="Газонокосилка" data-price="10499 руб."
+            data-image="https://media.istockphoto.com/id/171269002/ru/%D1%84%D0%BE%D1%82%D0%BE/%D0%B3%D0%B0%D0%B7%D0%BE%D0%BD%D0%BE%D0%BA%D0%BE%D1%81%D0%B8%D0%BB%D0%BA%D0%B0.jpg?s=612x612&w=is&k=20&c=M7o5ctBusw19-Oy3au2PeRp7Y1UEClGovOaDitjLARo=">
             Заказать
           </button>
         </article>
+      </div>
+      <div class="popular-products__more">
+        <a class="button button--primary popular-products__category-link" href="vacuum-cleaners.html">
+          Пылесосы
+          <span aria-hidden="true">→</span>
+        </a>
       </div>
     </section>
 
@@ -105,30 +128,39 @@
   </footer>
   <dialog class="order-dialog" id="order-dialog" aria-labelledby="order-dialog-title">
     <h2 id="order-dialog__title">Оформление заявки</h2>
+    <div class="order-dialog__product" id="order-product">
+      <img class="order-dialog__product-image" id="order-product-image" src="" alt="" hidden>
+      <div class="order-dialog__product-info">
+        <p class="order-dialog__product-label">Вы оформляете заявку на:</p>
+        <h3 class="order-dialog__product-title" id="order-product-title"></h3>
+        <p class="order-dialog__product-price" id="order-product-price"></p>
+      </div>
+    </div>
 
     <form class="order-form" id="order-form" action="#" method="post" novalidate>
       <input id="selected-product" name="selected-product" type="hidden">
 
       <div class="order-form__field">
         <label class="order-form__label" for="order-name">Имя</label>
-        <input class="order-form__input" id="order-name" name="name" type="text" placeholder="Введите ваше имя" minlength="2"
-          autocomplete="given-name" required>
+        <input class="order-form__input" id="order-name" name="name" type="text" placeholder="Введите ваше имя"
+          minlength="2" autocomplete="given-name" required>
       </div>
 
       <div class="order-form__field">
         <label class="order-form__label" for="order-email">E-mail</label>
-        <input class="order-form__input" id="order-email" name="email" type="email" placeholder="example@mail.ru" autocomplete="email" required>
+        <input class="order-form__input" id="order-email" name="email" type="email" placeholder="example@mail.ru"
+          autocomplete="email" required>
       </div>
 
       <div class="order-form__field">
         <label class="order-form__label" for="order-phone">Телефон</label>
-        <input class="order-form__input" id="order-phone" name="phone" type="tel" inputmode="tel" placeholder="+7 (900) 000-00-00"
-          pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$" required>
+        <input class="order-form__input" id="order-phone" name="phone" type="tel" inputmode="tel"
+          placeholder="+7 (900) 000-00-00" pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$" required>
         <small>Формат: +7 (900) 000-00-00</small>
       </div>
 
       <div class="order-form__field">
-        <label class="order-form__label"  for="order-date">Дата связи</label>
+        <label class="order-form__label" for="order-date">Дата связи</label>
         <input class="order-form__input" id="order-date" name="date" type="date">
       </div>
 
@@ -144,7 +176,8 @@
 
       <div class="order-form__field">
         <label for="order-comment">Комментарий</label>
-        <textarea class="order-form__textarea" id="order-comment" name="comment" rows="4" placeholder="Укажите дополнительную информацию"></textarea>
+        <textarea class="order-form__textarea" id="order-comment" name="comment" rows="4"
+          placeholder="Укажите дополнительную информацию"></textarea>
       </div>
 
       <div class="form-field form-field--checkbox">

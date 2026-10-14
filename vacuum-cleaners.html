@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Пылесосы — Каталог товаров</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/category.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="index.html" class="site-header__logo">ShopProject</a>
+
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item">
+            <a href="index.html" class="site-nav__link">Главная</a>
+          </li>
+          <li class="site-nav__item">
+            <a href="vacuum-cleaners.html" class="site-nav__link site-nav__link--active">Пылесосы</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <a href="index.html" class="breadcrumbs__link">Главная</a>
+      <span class="breadcrumbs__current" aria-current="page">Пылесосы</span>
+    </nav>
+
+    <section class="section">
+      <h1>Пылесосы</h1>
+
+      <div class="products-grid">
+
+        <article class="product-card">
+          <img
+            src="images/vacuum-cleaner-1.jpg"
+            alt="Вертикальный пылесос"
+            class="product-card__image"
+          >
+
+          <div class="product-card__content">
+            <h2 class="product-card__title">Вертикальный пылесос</h2>
+            <p class="product-card__description">
+              Лёгкий и удобный для ежедневной уборки.
+            </p>
+            <div class="product-card__price-box">
+              <p class="product-card__price product-card__price--current">7 990 ₽</p>
+            </div>
+            <button
+              type="button"
+              class="button button--primary product-card__button"
+              data-product="Вертикальный пылесос"
+              data-price="7 990 ₽"
+              data-image="images/vacuum-cleaner-1.jpg"
+            >
+              Заказать
+            </button>
+          </div>
+        </article>
+
+        <article class="product-card product-card--featured">
+          <img
+            src="images/vacuum-cleaner-2.jpg"
+            alt="Робот-пылесос"
+            class="product-card__image"
+          >
+
+          <div class="product-card__content">
+            <h2 class="product-card__title">Робот-пылесос</h2>
+            <p class="product-card__description">
+              Автоматическая уборка без лишних усилий.
+            </p>
+            <div class="product-card__price-box">
+              <p class="product-card__price product-card__price--current">12 990 ₽</p>
+            </div>
+            <button
+              type="button"
+              class="button button--primary product-card__button"
+              data-product="Робот-пылесос"
+              data-price="12 990 ₽"
+              data-image="images/vacuum-cleaner-2.jpg"
+            >
+              Заказать
+            </button>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <img
+            src="images/vacuum-cleaner-3.jpg"
+            alt="Компактный пылесос"
+            class="product-card__image"
+          >
+
+          <div class="product-card__content">
+            <h2 class="product-card__title">Компактный пылесос</h2>
+            <p class="product-card__description">
+              Компактный корпус и высокая мощность.
+            </p>
+            <div class="product-card__price-box">
+              <p class="product-card__price product-card__price--current">5 990 ₽</p>
+            </div>
+            <button
+              type="button"
+              class="button button--primary product-card__button"
+              data-product="Компактный пылесос"
+              data-price="5 990 ₽"
+              data-image="images/vacuum-cleaner-3.jpg"
+            >
+              Заказать
+            </button>
+          </div>
+        </article>
+
+        <article class="product-card product-card--discount">
+          <img
+            src="images/vacuum-cleaner-4.jpg"
+            alt="Мощный пылесос для дома"
+            class="product-card__image"
+          >
+
+          <div class="product-card__content">
+            <h2 class="product-card__title">Мощный пылесос для дома</h2>
+            <p class="product-card__description">
+              Для тщательной уборки любых поверхностей.
+            </p>
+            <div class="product-card__price-box">
+              <p class="product-card__price product-card__price--current">9 990 ₽</p>
+            </div>
+            <button
+              type="button"
+              class="button button--primary product-card__button"
+              data-product="Мощный пылесос для дома"
+              data-price="9 990 ₽"
+              data-image="images/vacuum-cleaner-4.jpg"
+            >
+              Заказать
+            </button>
+          </div>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Учебный проект</p>
+  </footer>
+
+  <!-- Вставь сюда разметку своего модального окна order-dialog -->
+
+  <script src="js/main.js"></script>
+</body>
+</html>
