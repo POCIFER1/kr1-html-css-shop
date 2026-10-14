@@ -99,11 +99,10 @@ a:focus-visible {
   gap: 16px;
 }
 
-.grid-container {
+.products-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: auto 1fr auto;
-  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
 }
 
 .section h2 {
@@ -125,18 +124,22 @@ a:focus-visible {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.form-field {
+.order-dialog__title {
+  margin-top: 0;
+}
+
+.order-form__field {
   margin-bottom: var(--space-md);
 }
 
-.form-field label {
+.order-form__label {
   display: block;
   margin-bottom: var(--space-xs);
 }
 
-.form-field input,
-.form-field select,
-.form-field textarea {
+.order-form__input,
+.order-formt__select,
+.order-formt__textarea {
   width: 100%;
   padding: 10px 12px;
   border: 1px solid var(--color-border);
@@ -146,6 +149,19 @@ a:focus-visible {
 
 .form-field input[type="checkbox"] {
   width: auto;
+}
+
+.order-form__input:hover,
+.order-form__select:hover,
+.order-form__textarea:hover {
+  border-color: var(--color-primary);
+}
+
+.order-form__input:focus-visible,
+.order-form__select:focus-visible,
+.order-form__textarea:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
 }
 
 .form-field small {
@@ -161,7 +177,7 @@ footer {
 
 
 
-header {
+.site-header {
   background-color: var(--color-surface);
   position: fixed;
   top: 0;
@@ -178,7 +194,7 @@ footer {
 }
 
 
-.site-header {
+.site-header__inner {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 var(--space-lg);
@@ -188,7 +204,7 @@ footer {
   align-items: center;
 }
 
-.site-logo {
+.site-header__logo {
   font-weight: bold;
   text-decoration: none;
   color: #222222;
@@ -205,11 +221,11 @@ footer {
   list-style: none;
 }
 
-.site-nav__list li {
+.site-nav__item {
   margin-bottom: 8px;
 }
 
-.site-nav__list a {
+.site-nav__link {
   display: inline-block;
   padding: var(--space-sm) var(--space-md);
   color: var(--color-primary);
@@ -217,7 +233,17 @@ footer {
   border-radius: var(--radius-sm);
 }
 
-.site-nav__list a:hover {
+.site-nav__link:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+.site-nav__link--active {
+  color: var(--color-white);
+  background-color: var(--color-primary);
+}
+
+.site-nav__link:hover {
   color: var(--color-white);
   background-color: var(--color-primary);
 }
@@ -233,24 +259,41 @@ footer {
   background-color: var(--color-bg);
 }
 
-
-.products-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-lg);
-}
-
 .product-card:hover {
   border-color: var(--color-primary);
 }
 
-.product-card h3 {
-  margin-top: 0;
+.product-card--featured {
+  border-color: var(--color-primary);
 }
 
-.product-card .button {
+.product-card--discount {
+  border-color: var(--color-danger);
+}
+
+
+.product-card__title {
+  margin: 0;
+  color: var(--color-text);
+}
+
+.product-card__description {
+  margin: 0;
+  color: var(--color-muted);
+}
+
+.product-card__button {
   margin-top: auto;
   align-self: flex-start;
+}
+
+.product-card__price {
+  margin: 0;
+  font-weight: 700;
+}
+
+.product-card--discount .product-card__price {
+  color: var(--color-danger);
 }
 
 .button {
@@ -264,8 +307,24 @@ footer {
   cursor: pointer;
 }
 
-.button:hover {
+.button--primary {
+  color: var(--color-white);
+  background-color: var(--color-primary);
+}
+
+.button--primary:hover {
   background-color: var(--color-primary-dark);
+}
+
+.button--secondary {
+  color: var(--color-primary);
+  background-color: transparent;
+  border: 1px solid var(--color-primary);
+}
+
+.button--secondary:hover {
+  color: var(--color-white);
+  background-color: var(--color-primary);
 }
 
 .button:focus-visible {
@@ -273,11 +332,11 @@ footer {
   outline-offset: 3px;
 }
 
-.button:disabled {
+.button:disabled,
+.button--disabled {
   opacity: 0.6;
   cursor: not-allowed;
 }
-
 
 .aside-info {
   max-width: var(--container-width);
@@ -287,22 +346,7 @@ footer {
   background-color: var(--color-surface);
 }
 
-/*
-  Видимый фокус для клавиатурной навигации.
-*/
-.form-field input:hover,
-.form-field select:hover,
-.form-field textarea:hover {
-  border-color: var(--color-primary);
-}
 
-.form-field input:focus-visible,
-.form-field select:focus-visible,
-.form-field textarea:focus-visible,
-.form-actions button:focus-visible {
-  outline: 2px solid var(--color-primary);
-  outline-offset: 3px;
-}
 
 [aria-invalid="true"] {
   border-color: var(--color-danger);
@@ -320,10 +364,10 @@ footer {
 /*
   Кнопки формы.
 */
-.form-actions {
+.order-form__actions {
   display: flex;
-  gap: 12px;
-  margin-top: 20px;
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
 }
 
 /*
@@ -344,11 +388,11 @@ footer {
   color: var(--color-muted);
 }
 
-.breadcrumbs a {
+.breadcrumbs__link {
   color: var(--color-primary);
 }
 
-.breadcrumbs span::before {
+.breadcrumbs__current::before {
   content: " / ";
   color: var(--color-muted);
 }
