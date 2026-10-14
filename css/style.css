@@ -277,6 +277,11 @@ footer {
   color: var(--color-text);
 }
 
+.product-card__image {
+  width: 200px;
+  height: 200px;
+}
+
 .product-card__description {
   margin: 0;
   color: var(--color-muted);
@@ -292,8 +297,27 @@ footer {
   font-weight: 700;
 }
 
-.product-card--discount .product-card__price {
-  color: var(--color-danger);
+.product-card__price-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.product-card__price--old {
+  display: none;
+  font-size: 14px;
+  color: #999;
+  font-weight: normal;
+  text-decoration: line-through; /* Перечеркивание текста */
+}
+
+.product-card--sale .product-card__price--old {
+  display: inline;
+}
+
+.product-card--sale .product-card__price--current {
+  color: #ff3b30;
 }
 
 .button {
@@ -305,6 +329,11 @@ footer {
   border: none;
   border-radius: var(--radius-sm);
   cursor: pointer;
+}
+
+.order-dialog__product-image {
+  width: 200px;
+  height: 200px;
 }
 
 .button--primary {
@@ -445,4 +474,32 @@ footer {
   border: 1px solid var(--color-border);
   border-radius: var(--radius-sm);
   font: inherit;
+}
+
+.popular-products__more {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.popular-products__category-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-width: 200px;
+  padding: 14px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.popular-products__category-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgb(0 0 0 / 12%);
+}
+
+.popular-products__category-link:focus-visible {
+  outline: 3px solid #222;
+  outline-offset: 4px;
 }
