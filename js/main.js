@@ -60,14 +60,14 @@ const orderForm = document.getElementById('order-form');
 const successMessage = document.getElementById('success-message');
 
 // Обрабатываем отправку формы.
+const submitBtn = orderForm.querySelector('.button--primary');
+const btnText = submitBtn.querySelector('.button__text');
+
 orderForm.addEventListener('submit', (event) => {
-  // Отменяем стандартную отправку формы,
-  // потому что backend пока не подключён.
   event.preventDefault();
 
   // Сбрасываем предыдущие признаки ошибок.
   const formElements = Array.from(orderForm.elements);
-
   formElements.forEach((element) => {
     if (element.willValidate) {
       element.removeAttribute('aria-invalid');
@@ -82,17 +82,35 @@ orderForm.addEventListener('submit', (event) => {
       }
     });
 
-    // Показываем стандартные сообщения браузера.
     orderForm.reportValidity();
     return;
   }
 
-  // Показываем сообщение об успешной отправке.
-  successMessage.hidden = false;
+  // --- ЛОГИКА ЗАГРУЗКИ (ФОРМА ВАЛИДНА) ---
+  
+  // 1. Включаем спиннер и блокируем кнопку
+  submitBtn.classList.add('is-loading');
+  submitBtn.disabled = true;
+  if (btnText) btnText.textContent = 'Отправка...';
 
-  // Очищаем форму.
-  orderForm.reset();
+  // 2. Запускаем искусственную задержку в 1.5 секунды
+  setTimeout(() => {
+    
+    // Показываем сообщение об успешной отправке.
+    successMessage.hidden = false;
 
-  // Закрываем модальное окно.
-  orderDialog.close();
+    // Очищаем форму.
+    orderForm.reset();
+
+    // Возвращаем кнопку в исходное состояние (чтобы при следующем открытии модалки она была активна)
+    submitBtn.classList.remove('is-loading');
+    submitBtn.disabled = false;
+    if (btnText) btnText.textContent = 'Отправить заявку';
+
+    // Закрываем модальное окно.
+    orderDialog.close();
+    
+  }, 1500); // 1500 миллисекунд задержки
 });
+
+

@@ -17,10 +17,10 @@
             <nav class="site-nav" aria-label="Основная навигация">
                 <ul class="site-nav__list">
                     <li class="site-nav__item">
-                        <a class="site-nav__link site-nav__link--active" href="index.html">Главная
+                        <a class="site-nav__link site-nav__link" href="index.html">Главная
                         </a>
                     </li>
-                    <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+                    <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="catalog.html">Каталог</a></li>
                     <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
                     <li class="site-nav__item"><a class="site-nav__link" href="index.html#advantages">Преимущества</a>
                     </li>
@@ -88,30 +88,87 @@
 
             <section class="catalog-products">
 
-                <section class="section">
-                    <h2>Список товаров</h2>
+                
+<section class="section">
+    <h2>Список товаров</h2>
 
-                    <article class="product-card">
-                        <h3>Товар 1</h3>
-                        <p>Краткое описание учебного товара.</p>
-                        <p>Цена: 1000 руб.</p>
-                        <a class="button" href="index.html#popular">Подробнее</a>
-                    </article>
+    <div class="catalog-products__list">
 
-                    <article class="product-card">
-                        <h3>Товар 2</h3>
-                        <p>Краткое описание учебного товара.</p>
-                        <p>Цена: 1500 руб.</p>
-                        <a class="button" href="index.html#popular">Подробнее</a>
-                    </article>
+        <!-- Дрель -->
+        <article class="product-card">
+            <img
+                class="product-card__image"
+                src="https://media.istockphoto.com/id/1169548847/ru/%D1%84%D0%BE%D1%82%D0%BE/%D0%B6%D0%B5%D0%BB%D1%82%D1%8B%D0%B9-%D0%B1%D0%B5%D1%81%D0%BF%D1%80%D0%BE%D0%B2%D0%BE%D0%B4%D0%BD%D0%BE%D0%B9-%D1%8D%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%BD%D0%BD%D0%BE%D0%B9-%D0%BE%D1%82%D0%B2%D0%B5%D1%80%D1%82%D0%BA%D0%B8-%D1%81%D0%B2%D0%B5%D1%80%D0%BB%D0%B8%D1%82%D1%8C-%D1%80%D1%83%D1%87%D0%BD%D0%BE%D0%B9-%D0%B8%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BC%D0%B5%D0%BD%D1%82-%D0%B8%D0%B7%D0%BE%D0%BB%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D1%8B%D1%85-%D0%B1%D0%B5%D0%BB%D1%8B%D0%B9.jpg?s=612x612&w=is&k=20&c=DPGDD1NXeDnv_kTtmiTWGEQvLBY9-UdxS_wVv22GhuI="
+                alt="Дрель"
+            >
 
-                    <article class="product-card">
-                        <h3>Товар 3</h3>
-                        <p>Краткое описание учебного товара.</p>
-                        <p>Цена: 2000 руб.</p>
-                        <a class="button" href="index.html#popular">Подробнее</a>
-                    </article>
-                </section>
+            <h3 class="product-card__title">Дрель</h3>
+
+            <p class="product-card__description">
+                Мощный инструмент для дома и ремонта.
+            </p>
+
+            <p class="product-card__price">
+                Цена: 5999 руб.
+            </p>
+
+            <a class="button product-card__details"
+               href="product.html">
+                Подробнее
+            </a>
+        </article>
+
+        <!-- Шуруповёрт -->
+        <article class="product-card">
+            <img
+                class="product-card__image"
+                src="https://media.istockphoto.com/id/926681604/ru/%D1%84%D0%BE%D1%82%D0%BE/%D1%8D%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F-%D0%BE%D1%82%D0%B2%D0%B5%D1%80%D1%82%D0%BA%D0%B0-%D0%B8%D0%B7%D0%BE%D0%BB%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B0-%D0%BD%D0%B0-%D0%B1%D0%B5%D0%BB%D0%BE%D0%BC-%D1%84%D0%BE%D0%BD%D0%B5.jpg?s=612x612&w=0&k=20&c=gP_P_5YoQEJgeh1knS-XA0ih1tMYr47GTqsppFHQLXY="
+                alt="Шуруповёрт"
+            >
+
+            <h3 class="product-card__title">Шуруповёрт</h3>
+
+            <p class="product-card__description">
+                Для сборки мебели и монтажных работ.
+            </p>
+
+            <p class="product-card__price">
+                Цена: 4999 руб.
+            </p>
+
+            <a class="button product-card__details"
+               href="screwdriver.html">
+                Подробнее
+            </a>
+        </article>
+
+        <!-- Газонокосилка -->
+        <article class="product-card">
+            <img
+                class="product-card__image"
+                src="https://media.istockphoto.com/id/171269002/ru/%D1%84%D0%BE%D1%82%D0%BE/%D0%B3%D0%B0%D0%B7%D0%BE%D0%BD%D0%BE%D0%BA%D0%BE%D1%81%D0%B8%D0%BB%D0%BA%D0%B0.jpg?s=612x612&w=is&k=20&c=M7o5ctBusw19-Oy3au2PeRp7Y1UEClGovOaDitjLARo="
+                alt="Газонокосилка"
+            >
+
+            <h3 class="product-card__title">Газонокосилка</h3>
+
+            <p class="product-card__description">
+                Для ухода за газоном и садовым участком.
+            </p>
+
+            <p class="product-card__price">
+                Цена: 11999 руб.
+            </p>
+
+            <a class="button product-card__details"
+               href="lawnmower.html">
+                Подробнее
+            </a>
+        </article>
+
+    </div>
+</section>
+
     </main>
 
     <footer>
