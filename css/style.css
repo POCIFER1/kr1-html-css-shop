@@ -25,7 +25,7 @@
 
   /* Скругления */
   --radius-sm: 6px;
-  --radius-md: 8px;
+  --radius-md: 10px;
   --radius-lg: 12px;
 
   /* Размеры */
@@ -248,6 +248,25 @@ footer {
   background-color: var(--color-primary);
 }
 
+.site-nav__drop-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.site-nav__item--zoomed {
+  position: relative;
+  display: inline-block;
+}
+
+.site-nav__item--zoomed:hover .site-nav__drop-content {
+  display: block;
+}
+
+
 .product-card {
   display: flex;
   flex-direction: column;
@@ -339,6 +358,36 @@ footer {
 .button--primary {
   color: var(--color-white);
   background-color: var(--color-primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* Отступ между текстом и спиннером */
+  position: relative;
+}
+
+.button__spinner {
+  display: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #fff; /* Цвет крутящейся части (белый) */
+  animation: button-spin 0.8s linear infinite;
+}
+
+.button--primary.is-loading {
+  pointer-events: none; /* Запрещаем повторные клики */
+  opacity: 0.8;         /* Немного приглушаем цвет */
+}
+
+.button--primary.is-loading .button__spinner {
+  display: inline-block;
+}
+
+@keyframes button-spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .button--primary:hover {
@@ -365,6 +414,14 @@ footer {
 .button--disabled {
   opacity: 0.6;
   cursor: not-allowed;
+}
+
+.button__up {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .aside-info {
@@ -503,3 +560,171 @@ footer {
   outline: 3px solid #222;
   outline-offset: 4px;
 }
+
+/* Блок отзывов */
+.feedback {
+  max-width: var(--container-width);
+  margin: 0 auto var(--space-xl);
+  padding: var(--space-md);
+  border-left: 4px solid var(--color-primary);
+  background-color: var(--color-surface);
+}
+
+.feedback-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+}
+
+.feedback__card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin-bottom: 0;
+  padding: var(--space-md);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background-color: var(--color-bg);
+}
+
+.feedback__avatar {
+  width: 20px;
+  height: 20px;
+}
+
+.feedback__user-name {
+  padding-left: 10px;
+}
+
+/* Блок FAQ */
+.faq {
+  max-width: var(--container-width);
+  margin: 0 auto var(--space-xl);
+  padding: var(--space-md);
+  border-left: 4px solid var(--color-primary);
+  background-color: var(--color-surface);
+}
+
+.faq__question {
+ cursor: pointer; 
+}
+
+/* Кнопки в карточке товара */
+.product-card__actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: auto;
+}
+
+/* Переопределяем отступ кнопки внутри общего блока */
+.product-card__actions .product-card__button {
+    margin-top: 0;
+    align-self: auto;
+}
+
+/* Кнопка Подробнее */
+.product-card__details {
+    display: inline-block;
+    padding: var(--space-sm) var(--space-md);
+    color: var(--color-primary);
+    background-color: var(--color-white);
+    border: 1px solid var(--color-primary);
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    text-align: center;
+}
+
+.product-card__details:hover {
+    color: var(--color-white);
+    background-color: var(--color-primary-dark);
+}
+
+.product-card__details:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 3px;
+}
+
+
+/* Страница подробного описания товара */
+
+.product-details {
+    max-width: 700px;
+    margin: 0 auto 32px;
+}
+
+.product-details .product-card {
+    align-items: flex-start;
+    gap: 14px;
+    padding: 24px;
+    border-radius: var(--radius-lg);
+}
+
+.product-details__image {
+    width: 100%;
+    max-width: 320px;
+    height: 260px;
+    object-fit: contain;
+    align-self: center;
+}
+
+.product-rating {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.product-rating__stars {
+    color: #f0a000;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.product-rating__text {
+    color: var(--color-muted);
+    font-size: 14px;
+}
+
+.product-details__description {
+    color: var(--color-muted);
+    line-height: 1.7;
+}
+
+.product-details .product-card__button {
+    margin-top: 8px;
+}
+
+@media (max-width: 600px) {
+    .product-details {
+        padding: 16px;
+    }
+
+    .product-details .product-card {
+        padding: 16px;
+    }
+
+    .product-details__image {
+        height: 220px;
+    }
+}
+
+
+.review-card__rating {
+  display: flex;
+  gap: 4px;
+  margin: 8px 0;
+}
+
+.review-card__rating .star {
+  color: #ccc;
+  font-size: 22px;
+  line-height: 1;
+}
+
+.review-card__rating .star--filled {
+  color: #f5a623;
+}
+
+
