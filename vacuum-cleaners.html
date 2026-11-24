@@ -1,134 +1,17 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Пылесосы — Каталог товаров</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/category.css">
-</head>
-<body>
-
-  <header class="site-header">
-    <div class="site-header__inner">
-      <a href="index.html" class="site-header__logo">ShopProject</a>
-
-      <nav class="site-nav" aria-label="Основная навигация">
-        <ul class="site-nav__list">
-          <li class="site-nav__item">
-            <a href="index.html" class="site-nav__link">Главная</a>
-          </li>
-          <li class="site-nav__item">
-            <a href="vacuum-cleaners.html" class="site-nav__link site-nav__link--active">Пылесосы</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <nav class="breadcrumbs" aria-label="Хлебные крошки">
-      <a href="index.html" class="breadcrumbs__link">Главная</a>
-      <span class="breadcrumbs__current" aria-current="page">Пылесосы</span>
-    </nav>
-
-    <section class="section">
-      <h1>Пылесосы</h1>
-
-      <div class="products-grid">
-
-        <article class="product-card">
-          <img
-            src="https://media.istockphoto.com/id/2208194789/sv/foto/modern-wireless-handheld-vacuum-cleaner-isolated-on-white.jpg?s=1024x1024&w=is&k=20&c=kPM69lgcfC1ietMppVXBbDo44ZSRFEMDWXDg7lMsFGg="
-            alt="Вертикальный пылесос"
-            class="product-card__image"
-          >
-
-          <div class="product-card__content">
-            <h2 class="product-card__title">Вертикальный пылесос</h2>
-            <p class="product-card__description">
-              Лёгкий и удобный для ежедневной уборки.
-            </p>
-            <div class="product-card__price-box">
-              <p class="product-card__price product-card__price--current">7 990 ₽</p>
-            </div>
-            <button
-              type="button"
-              class="button button--primary product-card__button"
-              data-product="Вертикальный пылесос"
-              data-price="7 990 ₽"
-              data-image="https://media.istockphoto.com/id/2208194789/sv/foto/modern-wireless-handheld-vacuum-cleaner-isolated-on-white.jpg?s=1024x1024&w=is&k=20&c=kPM69lgcfC1ietMppVXBbDo44ZSRFEMDWXDg7lMsFGg="
-            >
-              Заказать
-            </button>
-          </div>
-        </article>
-
-        <article class="product-card product-card--featured">
-          <img
-            src="https://media.istockphoto.com/id/2153345100/ru/%D1%84%D0%BE%D1%82%D0%BE/%D0%B4%D0%BE%D0%BC%D0%B0%D1%88%D0%BD%D0%B8%D0%B9-%D1%80%D0%BE%D0%B1%D0%BE%D1%82-%D0%BF%D1%8B%D0%BB%D0%B5%D1%81%D0%BE%D1%81-%D0%B8%D0%B7%D0%BE%D0%BB%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D1%8B%D0%B9-%D0%BD%D0%B0-%D0%B1%D0%B5%D0%BB%D0%BE%D0%BC-%D1%84%D0%BE%D0%BD%D0%B5.jpg?b=1&s=612x612&w=0&k=20&c=q_t6JaP6J7IOTj4T3-XHyS9rHrv-XDuYAw-I9l2hxqk="
-            alt="Робот-пылесос"
-            class="product-card__image"
-          >
-
-          <div class="product-card__content">
-            <h2 class="product-card__title">Робот-пылесос</h2>
-            <p class="product-card__description">
-              Автоматическая уборка без лишних усилий.
-            </p>
-            <div class="product-card__price-box">
-              <p class="product-card__price product-card__price--current">12 990 ₽</p>
-            </div>
-            <button
-              type="button"
-              class="button button--primary product-card__button"
-              data-product="Робот-пылесос"
-              data-price="12 990 ₽"
-              data-image="https://media.istockphoto.com/id/2153345100/ru/%D1%84%D0%BE%D1%82%D0%BE/%D0%B4%D0%BE%D0%BC%D0%B0%D1%88%D0%BD%D0%B8%D0%B9-%D1%80%D0%BE%D0%B1%D0%BE%D1%82-%D0%BF%D1%8B%D0%BB%D0%B5%D1%81%D0%BE%D1%81-%D0%B8%D0%B7%D0%BE%D0%BB%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D1%8B%D0%B9-%D0%BD%D0%B0-%D0%B1%D0%B5%D0%BB%D0%BE%D0%BC-%D1%84%D0%BE%D0%BD%D0%B5.jpg?b=1&s=612x612&w=0&k=20&c=q_t6JaP6J7IOTj4T3-XHyS9rHrv-XDuYAw-I9l2hxqk="
-            >
-              Заказать
-            </button>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <img
-            src="https://media.istockphoto.com/id/637077872/sv/foto/vacuum-cleaner.jpg?s=612x612&w=0&k=20&c=C0-UZAt6mSzAhruTo4rcefsrvhA6ABUB8QNvw5m3dLA="
-            alt="Компактный пылесос"
-            class="product-card__image"
-          >
-
-          <div class="product-card__content">
-            <h2 class="product-card__title">Компактный пылесос</h2>
-            <p class="product-card__description">
-              Компактный корпус и высокая мощность.
-            </p>
-            <div class="product-card__price-box">
-              <p class="product-card__price product-card__price--current">5 990 ₽</p>
-            </div>
-            <button
-              type="button"
-              class="button button--primary product-card__button"
-              data-product="Компактный пылесос"
-              data-price="5 990 ₽"
-              data-image="https://media.istockphoto.com/id/637077872/sv/foto/vacuum-cleaner.jpg?s=612x612&w=0&k=20&c=C0-UZAt6mSzAhruTo4rcefsrvhA6ABUB8QNvw5m3dLA="
-            >
-              Заказать
-            </button>
-          </div>
-        </article>
-
-        
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2026 Учебный проект</p>
-  </footer>
-
-  <!-- Вставь сюда разметку своего модального окна order-dialog -->
-
-  <script src="js/main.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пылесосы — ЗОЛОТАЯ ДРЕЛЬ</title>
+    <link rel="icon" type="image/svg+xml" href="./images/brand-drill.svg">
+    <meta http-equiv="refresh" content="0; url=./catalog.html?category=cleaning">
+    <meta name="description" content="Вертикальные, компактные и роботы-пылесосы для дома.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Пылесосы — ЗОЛОТАЯ ДРЕЛЬ">
+    <meta property="og:description" content="Вертикальные, компактные и роботы-пылесосы для дома.">
+  </head>
+  <body>
+    <p>Пылесосы теперь в <a href="./catalog.html?category=cleaning">каталоге</a>.</p>
+  </body>
 </html>
